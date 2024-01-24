@@ -1,5 +1,5 @@
 import 'package:bbmgram/components/bottom_nav.dart';
-import 'package:bbmgram/components/pofile_appbar.dart';
+import 'package:bbmgram/components/profile_appbar.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -31,7 +31,7 @@ class Profile extends StatelessWidget {
                       width: 80,
                     ),
                     Room(numbers: 0, strings: "Posts"),
-                    Room(numbers: 20, strings: "Followers"),
+                    Room(numbers: 2000, strings: "Followers"),
                     Room(numbers: 30, strings: "Following"),
                   ],
                 ),

@@ -1,3 +1,4 @@
+import 'package:bbmgram/pages/user/settings.dart';
 import 'package:flutter/material.dart';
 
 class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -29,9 +30,14 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
                     color: Colors.white,
                   )),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Settings();
+                    }));
+                  },
                   icon: Icon(
-                    Icons.density_medium_rounded,
+                    Icons.settings,
                     color: Colors.white,
                   )),
             ],

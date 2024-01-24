@@ -1,3 +1,5 @@
+import 'package:bbmgram/pages/home.dart';
+import 'package:bbmgram/pages/user/profile.dart';
 import 'package:flutter/material.dart';
 
 class BottomNav extends StatefulWidget {
@@ -10,41 +12,62 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: Color.fromARGB(255, 32, 32, 32),
-      items: [
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.house,
-              color: Colors.white,
-            ),
-            label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.publish_sharp,
-              color: Colors.white,
-            ),
-            label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.video_collection,
-              color: Colors.white,
-            ),
-            label: ""),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-            label: ""),
-      ],
+    return Container(
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 47, 46, 46),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          CustomButtonIcon(icon: Icons.home, screen: Home()),
+          CustomButtonIcon(
+            icon: Icons.search,
+            screen: Profile(),
+          ),
+          CustomButtonIcon(
+            icon: Icons.file_upload_outlined,
+            screen: Profile(),
+          ),
+          CustomButtonIcon(
+            icon: Icons.video_collection,
+            screen: Profile(),
+          ),
+          CustomButtonIcon(
+            icon: Icons.person,
+            screen: Profile(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomButtonIcon extends StatelessWidget {
+  CustomButtonIcon({
+    super.key,
+    required this.icon,
+    this.screen,
+  });
+
+  IconData icon;
+  Widget? screen;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton.icon(
+      onPressed: () {
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) {
+          return screen!;
+        }));
+      },
+      icon: Icon(
+        icon,
+        color: Colors.white,
+        size: 25,
+      ),
+      label: Text(""),
     );
   }
 }

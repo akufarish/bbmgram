@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -16,9 +17,8 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           Text(
             "BBMGRAM",
-            style: TextStyle(
-              color: Colors.white,
-            ),
+            style: GoogleFonts.grapeNuts(
+                color: Colors.white, fontWeight: FontWeight.bold),
           ),
           Row(
             children: [
