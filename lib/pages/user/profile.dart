@@ -32,7 +32,7 @@ class Profile extends StatelessWidget {
                     ),
                     Room(numbers: 0, strings: "Posts"),
                     Room(numbers: 2000, strings: "Followers"),
-                    Room(numbers: 30, strings: "Following"),
+                    Room(numbers: 1, strings: "Following"),
                   ],
                 ),
                 SizedBox(
