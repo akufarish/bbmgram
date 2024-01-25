@@ -1,4 +1,5 @@
 import 'package:bbmgram/components/profile_appbar.dart';
+import 'package:bbmgram/pages/messages/detail_messages.dart';
 import 'package:flutter/material.dart';
 
 class Message extends StatelessWidget {
@@ -112,7 +113,12 @@ class MessageButton extends StatelessWidget {
         style: TextButton.styleFrom(
             shape:
                 const RoundedRectangleBorder(borderRadius: BorderRadius.zero)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return const DetailMessage();
+          }));
+        },
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
