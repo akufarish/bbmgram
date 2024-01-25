@@ -20,14 +20,14 @@ class Posts extends StatelessWidget {
                     Container(
                       width: 35,
                       height: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage("assets/img/Profile.png"))),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
-                    Text(
+                    const Text(
                       "LTG",
                       style: TextStyle(color: Colors.white),
                     )
@@ -36,7 +36,7 @@ class Posts extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.more_vert),
+                icon: const Icon(Icons.more_vert),
                 color: Colors.white,
               )
             ],
@@ -45,7 +45,7 @@ class Posts extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 400,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(image: AssetImage("assets/img/lys.png"))),
         ),
         Padding(
@@ -59,23 +59,23 @@ class Posts extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.heart_broken_outlined),
+                      icon: const Icon(Icons.heart_broken_outlined),
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.chat_bubble_outline),
+                      icon: const Icon(Icons.chat_bubble_outline),
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.airplanemode_active_outlined),
+                      icon: const Icon(Icons.airplanemode_active_outlined),
                       color: Colors.white,
                     ),
                   ],
@@ -83,14 +83,14 @@ class Posts extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.save_outlined),
+                icon: const Icon(Icons.save_outlined),
                 color: Colors.white,
               ),
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: Row(
             children: [
               Text(
@@ -100,18 +100,18 @@ class Posts extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(8, 2, 8, 2),
+        const Padding(
+          padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
           child: Row(
             children: [
               Text(
-                "LTG Love Yourself",
+                "LTG Rio De Janairo",
                 style: TextStyle(color: Colors.white),
               ),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
       ],

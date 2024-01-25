@@ -11,21 +11,21 @@ class Home extends StatelessWidget {
     return Material(
       type: MaterialType.transparency,
       child: Scaffold(
-        appBar: PrimaryAppBar(),
+        appBar: const PrimaryAppBar(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 32, 32, 32),
+            decoration: const BoxDecoration(
+              color:  Color.fromARGB(255, 32, 32, 32),
             ),
             child: Column(
               children: [
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
                               width: 0.5,
-                              color: const Color.fromARGB(255, 79, 79, 79)))),
+                              color:  Color.fromARGB(255, 79, 79, 79)))),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
                                 child: Container(
                                   width: 60,
                                   height: 60,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       image: DecorationImage(
                                           image: AssetImage(
                                               "assets/img/Profile.png"))),
@@ -48,12 +48,12 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-                for (var i = 1; i < 5; i++) Posts(),
+                for (var i = 1; i < 5; i++) const Posts(),
               ],
             ),
           ),
         ),
-        bottomNavigationBar: BottomNav(),
+        bottomNavigationBar: const BottomNav(),
       ),
     );
   }

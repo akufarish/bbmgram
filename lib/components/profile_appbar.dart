@@ -15,7 +15,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "LTG",
             style: TextStyle(
               color: Colors.white,
@@ -25,7 +25,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.file_upload_outlined,
                     color: Colors.white,
                   )),
@@ -33,10 +33,10 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
                   onPressed: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) {
-                      return Settings();
+                      return const Settings();
                     }));
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.settings,
                     color: Colors.white,
                   )),

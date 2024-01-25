@@ -1,3 +1,4 @@
+import 'package:bbmgram/pages/messages/messages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,13 +25,18 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.heart_broken,
                     color: Colors.white,
                   )),
               IconButton(
-                  onPressed: () {},
-                  icon: Icon(
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const Message();
+                    }));
+                  },
+                  icon: const Icon(
                     Icons.message_rounded,
                     color: Colors.white,
                   )),

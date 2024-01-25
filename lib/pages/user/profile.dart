@@ -14,19 +14,19 @@ class Profile extends StatelessWidget {
         body: Container(
           height: double.infinity,
           decoration:
-              BoxDecoration(color: const Color.fromARGB(255, 32, 32, 32)),
+              const BoxDecoration(color: Color.fromARGB(255, 32, 32, 32)),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image(
+                    const Image(
                       image: AssetImage("assets/img/Profile.png"),
                       width: 80,
                     ),
@@ -35,7 +35,7 @@ class Profile extends StatelessWidget {
                     Room(numbers: 1, strings: "Following"),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Row(
@@ -46,10 +46,10 @@ class Profile extends StatelessWidget {
                     CustomButton(text: "Show Profile"),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 150,
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -74,7 +74,7 @@ class Profile extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: BottomNav(),
+        bottomNavigationBar: const BottomNav(),
       ),
     );
   }
@@ -95,11 +95,11 @@ class Room extends StatelessWidget {
         children: [
           Text(
             numbers.toString(),
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: const TextStyle(color: Colors.white, fontSize: 15),
           ),
           Text(
             strings,
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: const TextStyle(color: Colors.white, fontSize: 15),
           ),
         ],
       ),
@@ -118,13 +118,13 @@ class CustomButton extends StatelessWidget {
       height: 30,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 49, 48, 48),
+            backgroundColor: const Color.fromARGB(255, 49, 48, 48),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
         onPressed: () {},
         child: Text(
           text,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );

@@ -10,8 +10,8 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Material(
         child: Container(
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 32, 32, 32),
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(255, 32, 32, 32),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,25 +26,25 @@ class Login extends StatelessWidget {
               ),
               CustomFormInput(text: "Email"),
               CustomFormInput(text: "Password"),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(15, 10, 12, 0),
+                padding: const EdgeInsets.fromLTRB(15, 10, 12, 0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(220, 88, 203, 253),
+                    backgroundColor: const Color.fromARGB(220, 88, 203, 253),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
-                    minimumSize: Size.fromHeight(40),
+                    minimumSize: const Size.fromHeight(40),
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) {
-                      return Home();
+                      return const Home();
                     }));
                   },
-                  child: Text(
+                  child: const Text(
                     "Login",
                     style: TextStyle(color: Colors.white),
                   ),
@@ -55,8 +55,8 @@ class Login extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(color: const Color.fromARGB(255, 32, 32, 32)),
-        child: Row(
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 32, 32, 32)),
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -85,16 +85,16 @@ class CustomFormInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: SizedBox(
         height: 55,
         child: TextField(
           decoration: InputDecoration(
             filled: true,
-            fillColor: Color.fromARGB(255, 187, 186, 187),
-            border: OutlineInputBorder(),
+            fillColor: const Color.fromARGB(255, 187, 186, 187),
+            border: const OutlineInputBorder(),
             hintText: text,
-            hintStyle: TextStyle(color: Colors.black),
+            hintStyle: const TextStyle(color: Colors.black),
           ),
         ),
       ),

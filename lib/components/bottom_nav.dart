@@ -13,29 +13,30 @@ class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      height: 60,
+      decoration: const BoxDecoration(
         color: Color.fromARGB(255, 47, 46, 46),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CustomButtonIcon(icon: Icons.home, screen: Home()),
+          CustomButtonIcon(icon: Icons.home, screen: const Home()),
           CustomButtonIcon(
             icon: Icons.search,
-            screen: Profile(),
+            screen: const Profile(),
           ),
           CustomButtonIcon(
             icon: Icons.file_upload_outlined,
-            screen: Profile(),
+            screen: const Profile(),
           ),
           CustomButtonIcon(
             icon: Icons.video_collection,
-            screen: Profile(),
+            screen: const Profile(),
           ),
           CustomButtonIcon(
             icon: Icons.person,
-            screen: Profile(),
+            screen: const Profile(),
           ),
         ],
       ),
@@ -67,7 +68,7 @@ class CustomButtonIcon extends StatelessWidget {
         color: Colors.white,
         size: 25,
       ),
-      label: Text(""),
+      label: const Text(""),
     );
   }
 }

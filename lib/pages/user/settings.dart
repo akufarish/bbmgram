@@ -29,7 +29,7 @@ class Settings extends StatelessWidget {
                 CustomCard(label: "About", icon: Icons.info_outline),
                 TextButton(
                   onPressed: () {},
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "Add account",
@@ -39,7 +39,7 @@ class Settings extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "Log out",
@@ -49,7 +49,7 @@ class Settings extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "Delete account",
@@ -100,16 +100,16 @@ class CustomCard extends StatelessWidget {
                       icon,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     Text(
                       label,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
-                Icon(
+                const Icon(
                   Icons.keyboard_arrow_right,
                   color: Colors.white,
                 )
