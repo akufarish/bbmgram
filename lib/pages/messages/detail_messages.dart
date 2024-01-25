@@ -16,6 +16,13 @@ class DetailMessage extends StatelessWidget {
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 32, 32, 32),
           ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container()
+            ],
+          ),
         ),
       ),
     );
